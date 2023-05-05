@@ -1,1 +1,6 @@
 /target
+
+traces/*
+!traces/*.c
+!traces/trace.py
+!traces/Makefile

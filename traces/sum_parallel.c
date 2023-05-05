@@ -7,8 +7,8 @@
 #include <pthread.h>
 #include <stdio.h>
 
-#define THREAD_COUNT 10 // you can change this value
-#define ELEMENT_COUNT 100 // you can change this value
+#define THREAD_COUNT (10)
+#define ELEMENT_COUNT (100)
 
 // shared global variables
 double sum=0;               // final sum to be produced by the program
@@ -35,10 +35,8 @@ int main() {
     long which;
     int i;
 
-    // setup barrier data structure if needed
     pthread_mutex_init(&mutex, NULL);
 
-    // Initialize array A[] for sumParallel
     for (i = 0; i < ELEMENT_COUNT; i++) {
         A[i] = i;
         correct_sum += A[i];
